@@ -1,0 +1,451 @@
+{
+  "loadingDataState": "1",
+  "carPower": 13,
+  "carHandl": 13,
+  "carAccel": 13,
+  "testPowerPoints": 0,
+  "testHandlPoints": 0,
+  "testAccelPoints": 0,
+  "RDPowerPoints": 0,
+  "RDHandlPoints": 0,
+  "RDAccelPoints": 0,
+  "engPowerPoints": 0,
+  "engHandlPoints": 0,
+  "engAccelPoints": 0,
+  "tPower": 0,
+  "tHandl": 0,
+  "tAccel": 0,
+  "lvlChassis": 1,
+  "lvlBrakes": 1,
+  "lvlCooling": 1,
+  "lvlElectronics": 1,
+  "lvlEngine": 1,
+  "lvlFWing": 1,
+  "lvlRWing": 1,
+  "lvlGear": 1,
+  "lvlSidepods": 1,
+  "lvlSusp": 1,
+  "lvlUnderbody": 1,
+  "usaBrakes": 0,
+  "usaChassis": 0,
+  "usaCooling": 0,
+  "usaElectronics": 0,
+  "usaEngine": 0,
+  "usaFWing": 0,
+  "usaGear": 0,
+  "usaRWing": 0,
+  "usaSidepods": 0,
+  "usaSusp": 0,
+  "usaUnderbody": 0,
+  "canRepair": 1,
+  "canUndo": 0,
+  "endOfSeason": 0,
+  "raceInProgress": 0,
+  "updateInProgress": 0,
+  "chassisOptions": [
+    {
+      "value": {
+        "value": 0,
+        "cost": 0
+      },
+      "newLvl": "1",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Don't replace"
+    },
+    {
+      "value": {
+        "value": 1,
+        "cost": 1292539
+      },
+      "newLvl": "1",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Replace with L1 ($1.292.539)"
+    },
+    {
+      "value": {
+        "value": 2,
+        "cost": 1600810
+      },
+      "newLvl": "2",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Replace with L2 ($1.600.810)"
+    }
+  ],
+  "engineOptions": [
+    {
+      "value": {
+        "value": 0,
+        "cost": 0
+      },
+      "newLvl": "1",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Don't replace"
+    },
+    {
+      "value": {
+        "value": 1,
+        "cost": 3311737
+      },
+      "newLvl": "1",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Replace with L1 ($3.311.737)"
+    },
+    {
+      "value": {
+        "value": 2,
+        "cost": 4101586
+      },
+      "newLvl": "2",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Replace with L2 ($4.101.586)"
+    }
+  ],
+  "fWingOptions": [
+    {
+      "value": {
+        "value": 0,
+        "cost": 0
+      },
+      "newLvl": "1",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Don't replace"
+    },
+    {
+      "value": {
+        "value": 1,
+        "cost": 1551354
+      },
+      "newLvl": "1",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Replace with L1 ($1.551.354)"
+    },
+    {
+      "value": {
+        "value": 2,
+        "cost": 1921352
+      },
+      "newLvl": "2",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Replace with L2 ($1.921.352)"
+    }
+  ],
+  "rWingOptions": [
+    {
+      "value": {
+        "value": 0,
+        "cost": 0
+      },
+      "newLvl": "1",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Don't replace"
+    },
+    {
+      "value": {
+        "value": 1,
+        "cost": 1504126
+      },
+      "newLvl": "1",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Replace with L1 ($1.504.126)"
+    },
+    {
+      "value": {
+        "value": 2,
+        "cost": 1862860
+      },
+      "newLvl": "2",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Replace with L2 ($1.862.860)"
+    }
+  ],
+  "underbodyOptions": [
+    {
+      "value": {
+        "value": 0,
+        "cost": 0
+      },
+      "newLvl": "1",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Don't replace"
+    },
+    {
+      "value": {
+        "value": 1,
+        "cost": 510128
+      },
+      "newLvl": "1",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Replace with L1 ($510.128)"
+    },
+    {
+      "value": {
+        "value": 2,
+        "cost": 631794
+      },
+      "newLvl": "2",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Replace with L2 ($631.794)"
+    }
+  ],
+  "sidepodsOptions": [
+    {
+      "value": {
+        "value": 0,
+        "cost": 0
+      },
+      "newLvl": "1",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Don't replace"
+    },
+    {
+      "value": {
+        "value": 1,
+        "cost": 459831
+      },
+      "newLvl": "1",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Replace with L1 ($459.831)"
+    },
+    {
+      "value": {
+        "value": 2,
+        "cost": 569501
+      },
+      "newLvl": "2",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Replace with L2 ($569.501)"
+    }
+  ],
+  "coolingOptions": [
+    {
+      "value": {
+        "value": 0,
+        "cost": 0
+      },
+      "newLvl": "1",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Don't replace"
+    },
+    {
+      "value": {
+        "value": 1,
+        "cost": 454545
+      },
+      "newLvl": "1",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Replace with L1 ($454.545)"
+    },
+    {
+      "value": {
+        "value": 2,
+        "cost": 562954
+      },
+      "newLvl": "2",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Replace with L2 ($562.954)"
+    }
+  ],
+  "gearOptions": [
+    {
+      "value": {
+        "value": 0,
+        "cost": 0
+      },
+      "newLvl": "1",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Don't replace"
+    },
+    {
+      "value": {
+        "value": 1,
+        "cost": 3098104
+      },
+      "newLvl": "1",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Replace with L1 ($3.098.104)"
+    },
+    {
+      "value": {
+        "value": 2,
+        "cost": 3837002
+      },
+      "newLvl": "2",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Replace with L2 ($3.837.002)"
+    }
+  ],
+  "brakesOptions": [
+    {
+      "value": {
+        "value": 0,
+        "cost": 0
+      },
+      "newLvl": "1",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Don't replace"
+    },
+    {
+      "value": {
+        "value": 1,
+        "cost": 697674
+      },
+      "newLvl": "1",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Replace with L1 ($697.674)"
+    },
+    {
+      "value": {
+        "value": 2,
+        "cost": 864069
+      },
+      "newLvl": "2",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Replace with L2 ($864.069)"
+    }
+  ],
+  "suspOptions": [
+    {
+      "value": {
+        "value": 0,
+        "cost": 0
+      },
+      "newLvl": "1",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Don't replace"
+    },
+    {
+      "value": {
+        "value": 1,
+        "cost": 1181545
+      },
+      "newLvl": "1",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Replace with L1 ($1.181.545)"
+    },
+    {
+      "value": {
+        "value": 2,
+        "cost": 1463343
+      },
+      "newLvl": "2",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Replace with L2 ($1.463.343)"
+    }
+  ],
+  "electronicsOptions": [
+    {
+      "value": {
+        "value": 0,
+        "cost": 0
+      },
+      "newLvl": "1",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Don't replace"
+    },
+    {
+      "value": {
+        "value": 1,
+        "cost": 938416
+      },
+      "newLvl": "1",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Replace with L1 ($938.416)"
+    },
+    {
+      "value": {
+        "value": 2,
+        "cost": 1162228
+      },
+      "newLvl": "2",
+      "newWear": "0",
+      "disabled": "false",
+      "text": "Replace with L2 ($1.162.228)"
+    }
+  ],
+  "selectedBrakes": {
+    "value": 0,
+    "cost": 0
+  },
+  "selectedChassis": {
+    "value": 0,
+    "cost": 0
+  },
+  "selectedCooling": {
+    "value": 0,
+    "cost": 0
+  },
+  "selectedElectronics": {
+    "value": 0,
+    "cost": 0
+  },
+  "selectedEngine": {
+    "value": 0,
+    "cost": 0
+  },
+  "selectedFWing": {
+    "value": 0,
+    "cost": 0
+  },
+  "selectedGear": {
+    "value": 0,
+    "cost": 0
+  },
+  "selectedRWing": {
+    "value": 0,
+    "cost": 0
+  },
+  "selectedSidepods": {
+    "value": 0,
+    "cost": 0
+  },
+  "selectedSusp": {
+    "value": 0,
+    "cost": 0
+  },
+  "selectedUnderbody": {
+    "value": 0,
+    "cost": 0
+  },
+  "totalCosts": 0,
+  "undoCompleted": 0,
+  "carUpdated": 0,
+  "cash": 32166980,
+  "showCarUpdateAlert": false,
+  "showUndoAlert": false,
+  "showUndoAlertCredits": false,
+  "showUndoAlertNoCredits": false,
+  "credits": 0,
+  "races": 0
+}

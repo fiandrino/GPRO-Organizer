@@ -1,0 +1,31 @@
+{
+  "IDM": 943299,
+  "staticContentServer": "https://gpro.net/gb",
+  "twemojiBaseUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/",
+  "credits": 33.28,
+  "email": "",
+  "fName": "Beta",
+  "lName": "Tester",
+  "natCode": "aq",
+  "group": "Rookie - 31",
+  "groupShort": "R31",
+  "class": "Ro",
+  "accStatus": "Not activated",
+  "accStatusId": 5,
+  "cash": 23000000,
+  "champs": 0,
+  "picPath": "/images/NoPhoto.gif",
+  "teamId": 66,
+  "teamCredits": -0.19,
+  "driverId": 30357,
+  "friends": [
+    2
+  ],
+  "muted": [
+    50
+  ],
+  "teammates": [
+    50
+  ],
+  "apiRequestsRemaining": 99
+}

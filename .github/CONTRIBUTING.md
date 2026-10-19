@@ -174,6 +174,9 @@ The long-term direction is to transition toward official API usage whenever feas
 
 New contributions should avoid introducing additional scraping dependencies unless absolutely necessary.
 
+To add a new API endpoint, follow the step-by-step guide in [`Api/README.md`](../Api/README.md).
+It also contains the migration status of every data source.
+
 ---
 
 ## Data Files

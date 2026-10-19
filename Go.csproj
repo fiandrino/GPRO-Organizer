@@ -336,6 +336,18 @@
     <Compile Include="Enums\TestPriority.cs" />
     <Compile Include="Enums\TyreType.cs" />
     <Compile Include="Enums\TyreWear.cs" />
+    <Compile Include="Api\ApiClient.cs" />
+    <Compile Include="Api\ApiFallback.cs" />
+    <Compile Include="Api\ApiNumber.cs" />
+    <Compile Include="Api\ApiSettings.cs" />
+    <Compile Include="Api\Dto\CarDto.cs" />
+    <Compile Include="Api\Dto\DriverProfileDto.cs" />
+    <Compile Include="Api\Dto\MenuDto.cs" />
+    <Compile Include="Api\Dto\OfficeDto.cs" />
+    <Compile Include="Api\Dto\Qualify2Dto.cs" />
+    <Compile Include="Api\Mappers\CarMapper.cs" />
+    <Compile Include="Api\Mappers\DriverMapper.cs" />
+    <Compile Include="Api\Mappers\QualifyMapper.cs" />
     <Compile Include="Comms\Communication.cs" />
     <Compile Include="Comms\NewVersion.cs">
       <SubType>Form</SubType>

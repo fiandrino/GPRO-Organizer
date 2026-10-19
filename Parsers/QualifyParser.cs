@@ -4,6 +4,9 @@
  
  
 
+using go.Api;
+using go.Api.Dto;
+using go.Api.Mappers;
 using go.Utils;
 using System;
 
@@ -131,13 +134,24 @@ namespace go.Parsers
       }
     }
 
+    // Both qualifying sessions come from the same "Qualify2" endpoint.
     public static Qualify ParseQualify2()
     {
+      Qualify qualify2 = ApiFallback.Load<Qualify2Dto, Qualify>("Qualify2", QualifyMapper.ToQualify2);
+
+      if (qualify2 != null)
+        return qualify2;
+
       return QualifyParser.ParseQualify2(Datas.Communications.GetPage("Qualify2.asp"));
     }
 
     public static Qualify ParseQualify1()
     {
+      Qualify qualify1 = ApiFallback.Load<Qualify2Dto, Qualify>("Qualify2", QualifyMapper.ToQualify1);
+
+      if (qualify1 != null)
+        return qualify1;
+
       return QualifyParser.ParseQualify1(Datas.Communications.GetPage("Qualify.asp"));
     }
   }

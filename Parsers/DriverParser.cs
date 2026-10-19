@@ -4,6 +4,9 @@
 
 
 
+using go.Api;
+using go.Api.Dto;
+using go.Api.Mappers;
 using go.Utils;
 using System;
 using System.Collections;
@@ -21,12 +24,25 @@ namespace go.Parsers
         {
             Driver5 driver5 = new Driver5();
 
-            return id == 0
-                ? driver5
-                : DriverParser.GetDriver(
-                    Datas.Communications.GetPage("DriverProfile.asp?ID=" + id.ToString()),
-                    id
-                );
+            if (id == 0)
+            {
+                return driver5;
+            }
+
+            Driver5 fromApi = ApiFallback.Load<DriverProfileDto, Driver5>(
+                "DriProfile?DriverTDId=" + id.ToString(),
+                dto => DriverMapper.ToDriver5(dto, id)
+            );
+
+            if (fromApi != null)
+            {
+                return fromApi;
+            }
+
+            return DriverParser.GetDriver(
+                Datas.Communications.GetPage("DriverProfile.asp?ID=" + id.ToString()),
+                id
+            );
         }
 
         public static Driver5 GetDriver(string driverPage, int id)

@@ -4,6 +4,9 @@
  
  
 
+using go.Api;
+using go.Api.Dto;
+using go.Api.Mappers;
 using go.Utils;
 using System;
 using System.Text.RegularExpressions;
@@ -64,7 +67,15 @@ namespace go.Parsers
         part.wear = int.Parse(wearText);
     
     }
-    public static Car2 GetCar() => CarParser.GetCar(Datas.Communications.GetPage("UpdateCar.asp"));
+    public static Car2 GetCar()
+    {
+      Car2 car = ApiFallback.Load<CarDto, Car2>("UpdateCar", CarMapper.ToCar2);
+
+      if (car != null)
+        return car;
+
+      return CarParser.GetCar(Datas.Communications.GetPage("UpdateCar.asp"));
+    }
 
     public static Car2 GetCar(string carPage)
     {

@@ -1,4 +1,6 @@
-﻿using go.Forms;
+﻿using go.Api;
+using go.Api.Dto;
+using go.Forms;
 using go.Parsers;
 using go.Utils;
 using System;
@@ -206,6 +208,71 @@ namespace go.Comms
             this.GetData(
                 Regex.Replace(homePage, "[\r\t\n]", "")
             );
+
+            if (ApiSettings.UseApi)
+            {
+                this.LoadIdentityFromApi();
+            }
+        }
+
+
+        // Reads manager, driver and race data from the GPRO API.
+        // If the API fails, the values already read from the home page are kept.
+        //
+        // The group name and the manager name are NOT replaced: the group name is used to build
+        // the address of pages that are still scraped, and its format may differ from the API one.
+        // Their differences are only written to the log.
+        private void LoadIdentityFromApi()
+        {
+            try
+            {
+                ApiClient client = new ApiClient(ApiSettings.Token);
+
+                MenuDto menu = client.Get<MenuDto>("Menu");
+                OfficeDto office = client.Get<OfficeDto>("office");
+
+                this.LogIdentityDifferences(menu, office);
+
+                this.managerID = menu.IDM;
+                this.driverid = menu.driverId;
+                this.TechDid = office.TechnicalDirectorId;
+
+                Date date = new Date();
+                date.season = office.Season;
+                date.race = office.Race;
+                Datas.Date = date;
+            }
+            catch (Exception ex)
+            {
+                Errlog.AddToLog("GPRO API identity failed, using home page data: " + ex.Message);
+            }
+        }
+
+
+        // Compares the API values with the ones read from the home page, before they are replaced.
+        private void LogIdentityDifferences(MenuDto menu, OfficeDto office)
+        {
+            LogIfDifferent("manager id", this.managerID.ToString(), menu.IDM.ToString());
+            LogIfDifferent("manager name", this.managerName, menu.fName + " " + menu.lName);
+            LogIfDifferent("group", this.groupName, menu.group);
+            LogIfDifferent("driver id", this.driverid.ToString(), menu.driverId.ToString());
+            LogIfDifferent("technical director id", this.TechDid.ToString(), office.TechnicalDirectorId.ToString());
+            LogIfDifferent("season", Datas.Date.season.ToString(), office.Season.ToString());
+            LogIfDifferent("race", Datas.Date.race.ToString(), office.Race.ToString());
+
+            Errlog.AddToLog("GPRO API requests remaining: " + menu.apiRequestsRemaining);
+        }
+
+
+        private static void LogIfDifferent(string field, string fromHomePage, string fromApi)
+        {
+            if (fromHomePage != fromApi)
+            {
+                Errlog.AddToLog(
+                    "GPRO API differs from home page - " + field +
+                    ": home page '" + fromHomePage + "', API '" + fromApi + "'"
+                );
+            }
         }
 
 

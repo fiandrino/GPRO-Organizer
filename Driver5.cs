@@ -128,6 +128,16 @@ namespace go
 
     public bool isSameDriver(int driverid) => this.id == driverid;
 
+    // Average points per race, rounded to 2 decimals as the GPRO site shows it.
+    // The API does not send this value, so it is worked out from the points and the races.
+    public double CalculateAveragePointsPerRace()
+    {
+      if (this.numberOfGps <= 0)
+        return 0.0;
+
+      return Math.Round((double) this.pointsScored / this.numberOfGps, 2, MidpointRounding.AwayFromZero);
+    }
+
     public bool isEqual(Driver5 d)
     {
       return d.name == this.name && d.id == this.id && this.nationality == d.nationality && this.overall == d.overall && this.concentration == d.concentration && this.talent == d.talent && this.aggresiveness == d.aggresiveness && this.experience == d.experience && this.technicalInsight == d.technicalInsight && this.stamina == d.stamina && this.charisma == d.charisma && this.motivation == d.motivation && this.weight == d.weight && this.age == d.age && this.salary == d.salary && this.racesLeftOfContract == d.racesLeftOfContract && this.trophies == d.trophies && this.numberOfGps == d.numberOfGps && this.wins == d.wins && this.podiums == d.podiums && this.pointsScored == d.pointsScored && this.polePositions == d.polePositions && this.fastestLaps == d.fastestLaps && this.avPointsPerrace == d.avPointsPerrace && this.reputation == d.reputation && this.energy == d.energy;
